@@ -44,3 +44,12 @@ app.post('/cliente/cadastro', (request, response) => {
         return response.send("Status: Cliente Cadastrado")
     })
 
+app.post('/login/cliente', (request, response) => {
+    const logincliente = cliente.find((clientes) => clientes.cpf == request.body.cpf && clientes.senha == request.body.senha)
+    if(logincliente){
+        return response.send("status: Seja bem vindo")
+    }
+    else{
+        return response.send("erro: cpf ou Senha incorretos")
+    }
+})
