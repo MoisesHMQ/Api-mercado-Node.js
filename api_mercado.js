@@ -21,3 +21,10 @@ app.get('/Produtos', (request, response) => {
     console.log(request.body);
     return response.json(Produtos)
 })
+
+app.delete('/excluir/Produtos', (request,response) => {
+    const id = Produtos.indexOf('id');
+    const excluirProdutos = Produtos.splice(id,1)
+            
+    return response.send(excluirProdutos)
+    })
