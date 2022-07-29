@@ -65,3 +65,7 @@ app.delete('/excluir/cliente', (request,response) => {
             
     return response.send(excluircliente)
     })
+
+app.listen(7000, () => {
+    console.log('Status: Mercado Aberto...')
+    })
