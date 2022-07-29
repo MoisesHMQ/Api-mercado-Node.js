@@ -58,3 +58,10 @@ app.get('/listar/cliente', (request, response) => {
     console.log(request.body);
     return response.json(cliente)
 })
+
+app.delete('/excluir/cliente', (request,response) => {
+    const id = cliente.indexOf('id');
+    const excluircliente = cliente.splice(id,1)
+            
+    return response.send(excluircliente)
+    })
