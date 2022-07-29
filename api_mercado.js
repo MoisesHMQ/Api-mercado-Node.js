@@ -17,4 +17,7 @@ app.post('/Produtos/cadastro', (request, response) => {
         return response.send("Status: Livro Cadastrado")
     })
 
-
+app.get('/Produtos', (request, response) => {
+    console.log(request.body);
+    return response.json(Produtos)
+})
